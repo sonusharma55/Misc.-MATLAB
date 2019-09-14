@@ -1,0 +1,15 @@
+n=0:0.01:10;
+l=length(n)
+x1=1.*(n>=1&n<=10);
+l1=length(x1)
+x2=1.*(n>=2&n<=10);
+l2=length(x2)
+x3=conv(x1,x2)
+l3=length(x3)
+n1=0:l3-1;
+subplot(3,1,1)
+plot(n,x1)
+subplot(3,1,2)
+plot(n,x2)
+subplot(3,1,3)
+plot(n1,x3)
