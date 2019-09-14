@@ -1,0 +1,14 @@
+f=10^4:10^5:10^10;
+w=2*%pi .*f;
+mu0=4*%pi*10^-7;
+l=2*2.5*10^-2;
+a=2.032*10^-4;
+temp=log(2*l/a)/log(%e);
+lex=mu0*1*(temp-1)/(2*%pi);
+r=2*10^3;
+c=5*10^-12;
+z=w*lex*%i+1 ./(w*c*%i+1/r);
+plot2d("gll",f,abs(z));
+title("High frequency impe behav of 2k ohm metal film resistor");
+xlabel('Frequency(f)in hz');
+ylabel('Absolute impedence(|Z|) in ohms');
